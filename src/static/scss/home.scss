@@ -1,0 +1,65 @@
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  height: 1.333333rem /* 50/37.5 */;
+  display: flex;
+  background-color: rgba(246, 246, 246, 0.95);
+  width: 100%;
+  border-top: 0.026667rem /* 1/37.5 */ solid #b6b6b6;
+  .btn-item {
+    flex: 1;
+    display: flex;
+    font-size: 0.293333rem /* 11/37.5 */;
+    color: #999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .tab-icon {
+      width: 0.64rem /* 24/37.5 */;
+      height: 0.64rem /* 24/37.5 */;
+      background-size: 0.64rem /* 24/37.5 */, 0.64rem /* 24/37.5 */;
+      margin-bottom: 0.08rem /* 3/37.5 */;
+    }
+    &.active {
+      color: #fea06a;
+    }
+    &.my {
+      .tab-icon {
+        background-image: url('~@static/img/myIcon.png');
+      }
+    }
+    &.my.active {
+      .tab-icon {
+        background-image: url('~@static/img/myIconActive.png');
+      }
+    }
+    &.order {
+      .tab-icon {
+        background-image: url('~@static/img/orderIcon.png');
+      }
+    }
+    &.order.active {
+      .tab-icon {
+        background-image: url('~@static/img/orderIconActive.png');
+      }
+    }
+    &.home {
+      .tab-icon {
+        background-image: url('~@static/img/homeIcon.png');
+      }
+    }
+    &.home.active {
+      .tab-icon {
+        background-image: url('~@static/img/homeIconActive.png');
+      }
+    }
+  }
+}
+.header {
+  position: relative;
+  .banner-img {
+    width: 100%;
+    height: 4.746667rem /* 178/37.5 */;
+  }
+}
