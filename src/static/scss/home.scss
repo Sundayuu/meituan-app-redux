@@ -63,3 +63,96 @@
     height: 4.746667rem /* 178/37.5 */;
   }
 }
+.cate-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  .cate-item {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 0.266667rem /* 10/37.5 */;
+    img {
+      width: 1.333333rem /* 50/37.5 */;
+      height: 1.333333rem; /* 50/37.5 */
+      padding-bottom: 0.053333rem; /* 2/37.5 */
+    }
+    p {
+      font-size: 0.426667rem; /* 16/37.5 */
+    }
+  }
+}
+.store-list {
+  width: 100%;
+  padding: 0.266667rem /* 10/37.5 */;
+  box-sizing: border-box;
+  margin-bottom: 1.333333rem /* 50/37.5 */;
+  .store-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .store-name {
+      font-size: 0.426667rem; /* 16/37.5 */
+      padding: 0 0.133333rem; /* 5/37.5 */
+    }
+    .store-line {
+      display: block;
+      width: 0.533333rem /* 20/37.5 */;
+      height: 0;
+      border: 0.013333rem /* 0.5/37.5 */ solid #000;
+    }
+  }
+  .store-item {
+    // height: 2.4rem /* 90/37.5 */;
+    position: relative;
+    padding: 0.4rem /* 15/37.5 */ 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    border-bottom: 0.013333rem /* 0.5/37.5 */ solid #e4e4e4;
+    .store-item-left {
+      display: block;
+      width: 2.133333rem /* 80/37.5 */;
+      height: 1.6rem; /* 60/37.5 */
+      margin-right: 0.266667rem; /* 10/37.5 */
+      border: 0.026667rem /* 1/37.5 */ solid #e4e4e4; /* 0.5/37.5 */
+    }
+    .store-item-right {
+      flex: 1;
+      color: #656565;
+      font-size: 0.32rem /* 12/37.5 */;
+      .right-head {
+        color: #000;
+        font-size: 0.426667rem; /* 16/37.5 */
+      }
+      .right-center {
+        display: flex;
+        justify-content: space-between;
+        margin: 0.133333rem /* 5/37.5 */ 0;
+        .sell-score {
+          display: flex;
+          .month-sell {
+            margin-left: 0.08rem; /* 3/37.5 */
+          }
+        }
+      }
+    }
+    .brand {
+      position: absolute;
+      top: 0.4rem /* 15/37.5 */;
+      left: 0;
+      width: 0.746667rem /* 28/37.5 */;
+      height: 0.426667rem /* 16/37.5 */;
+      color: #fff;
+    }
+    .brand-in {
+      background-color: #ffa627;
+    }
+    .brand-new {
+      background-color: #21c56c;
+    }
+  }
+}

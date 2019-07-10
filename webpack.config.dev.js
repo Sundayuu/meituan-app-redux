@@ -4,6 +4,7 @@ const HtmlWbpackPlugin = require('html-webpack-plugin')
 const srcRoot = path.resolve(__dirname, 'src')
 const devPath = path.resolve(__dirname, 'dev')
 const pageDir = path.resolve(srcRoot, 'page')
+const CopyWebpackPlugin = require('copy-webpack-plugin') // 配置静态资源打包
 const mainFile = 'index.js'
 const webpack = require('webpack')
 
@@ -53,7 +54,8 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json', '.scss'],
     alias: {
       '@static': path.resolve(__dirname, 'src/static'),
-      '@component': path.resolve(__dirname, 'src/component')
+      '@component': path.resolve(__dirname, 'src/component'),
+      '@actions': path.resolve(__dirname, 'src/page/index/actions')
     }
   },
   module: {
@@ -106,7 +108,11 @@ module.exports = {
   },
   plugins: [
     new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new CopyWebpackPlugin([
+      { from: 'src/json', to: path.resolve(devPath, 'json'), force: true },
+      { from: 'src/static', to: path.resolve(devPath, 'static'), force: true }
+    ])
   ].concat(htmlArray),
   devServer: {
     contentBase: devPath,
