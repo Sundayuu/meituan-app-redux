@@ -54,7 +54,7 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json', '.scss'],
     alias: {
       '@static': path.resolve(__dirname, 'src/static'),
-      '@component': path.resolve(__dirname, 'src/component'),
+      component: path.resolve(__dirname, 'src/component'),
       '@actions': path.resolve(__dirname, 'src/page/index/actions')
     }
   },

@@ -24,6 +24,16 @@
     &.active {
       color: #fea06a;
     }
+    &.cate {
+      .tab-icon {
+        background-image: url('~@static/img/category.png');
+      }
+    }
+    &.cate.active {
+      .tab-icon {
+        background-image: url('~@static/img/categoryActive.png');
+      }
+    }
     &.my {
       .tab-icon {
         background-image: url('~@static/img/myIcon.png');

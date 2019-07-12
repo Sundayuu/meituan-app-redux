@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getCateList } from '@actions/homeAction'
-import ScoreStart from '@component/ScoreStar'
+import { ScoreStart } from 'component'
 class StoreList extends Component {
   componentDidMount() {
     this.props.dispatch(getCateList(this.props.pageNum, 10))

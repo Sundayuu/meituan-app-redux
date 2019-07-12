@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { changeType } from './../actions/tabAction'
+import { Link, withRouter } from 'react-router-dom'
 class BottomBar extends Component {
   renderItems = () => {
     let tabs = this.props.tabs
@@ -10,14 +11,16 @@ class BottomBar extends Component {
         cls += ' active'
       }
       return (
-        <div
+        <Link
           key={item.key}
           className={cls}
           onClick={() => this.props.handleClick(item.key)}
+          replace={true}
+          to={'/' + item.key}
         >
           <div className="tab-icon" />
           <div className="btn-name">{item.name}</div>
-        </div>
+        </Link>
       )
     })
   }
@@ -33,7 +36,9 @@ const mapDispathToProps = dispatch => ({
   handleClick: key => dispatch(changeType(key))
 })
 
-export default connect(
-  mapStateToProps,
-  mapDispathToProps
-)(BottomBar)
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispathToProps
+  )(BottomBar)
+)
