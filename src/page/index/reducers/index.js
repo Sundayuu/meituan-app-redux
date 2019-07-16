@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux'
 import tabReducers from './tabReducers'
 import homeReducer from './homeReducer'
+import cateReducer from './cateReducers'
 const reducers = combineReducers({
   tabReducers,
-  homeReducer
+  homeReducer,
+  cateReducer
 })
 
 export default reducers

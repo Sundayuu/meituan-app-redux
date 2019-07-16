@@ -1,9 +1,10 @@
 .bottom-bar {
+  z-index: 50;
   position: fixed;
   bottom: 0;
   height: 1.333333rem /* 50/37.5 */;
   display: flex;
-  background-color: rgba(246, 246, 246, 0.95);
+  background-color: rgba(246, 246, 246, 1);
   width: 100%;
   border-top: 0.026667rem /* 1/37.5 */ solid #b6b6b6;
   .btn-item {
@@ -115,7 +116,7 @@
   }
   .store-item {
     // height: 2.4rem /* 90/37.5 */;
-    position: relative;
+    // position: relative;
     padding: 0.4rem /* 15/37.5 */ 0;
     width: 100%;
     display: flex;

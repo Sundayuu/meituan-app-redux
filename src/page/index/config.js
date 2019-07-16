@@ -4,5 +4,10 @@ module.exports = {
     order: 'order',
     cate: 'cate',
     my: 'my'
+  },
+  filterCate: {
+    cate: 'cate',
+    type: 'type',
+    filter: 'filter'
   }
 }

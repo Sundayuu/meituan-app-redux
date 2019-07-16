@@ -5,24 +5,79 @@
   }
 }
 .head {
+  background-color: #fff;
+  z-index: 999;
   position: fixed;
   top: 0;
-  padding: 0.133333rem /* 5/37.5 */ 0.133333rem /* 5/37.5 */;
+  padding: 0.266667rem /* 10/37.5 */ 0.133333rem /* 5/37.5 */;
   width: 100%;
   display: flex;
   align-items: center;
-  border-bottom: 0.026667rem /* 1/37.5 */ solid #e4e4e4;
-  font-size: 0.533333rem /* 20/37.5 */;
+  border-bottom: 0.026667rem /* 1/37.5 */ solid #999;
+  font-size: 0.48rem /* 18/37.5 */;
   .head-left {
     width: 0.8rem /* 30/37.5 */;
     height: 0.8rem; /* 30/37.5 */
   }
   .head-name {
     width: 100%;
+
     text-align: center;
   }
   .head-home {
     width: 0.8rem /* 30/37.5 */;
     height: 0.8rem; /* 30/37.5 */
+  }
+}
+.store-item {
+  // height: 2.4rem /* 90/37.5 */;
+  position: relative;
+  padding: 0.4rem /* 15/37.5 */ 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  border-bottom: 0.013333rem /* 0.5/37.5 */ solid #e4e4e4;
+  .store-item-left {
+    display: block;
+    width: 2.133333rem /* 80/37.5 */;
+    height: 1.6rem; /* 60/37.5 */
+    margin-right: 0.266667rem; /* 10/37.5 */
+    border: 0.026667rem /* 1/37.5 */ solid #e4e4e4; /* 0.5/37.5 */
+  }
+  .store-item-right {
+    flex: 1;
+    color: #656565;
+    font-size: 0.32rem /* 12/37.5 */;
+    .right-head {
+      color: #000;
+      font-size: 0.426667rem; /* 16/37.5 */
+    }
+    .right-center {
+      display: flex;
+      justify-content: space-between;
+      margin: 0.133333rem /* 5/37.5 */ 0;
+      .sell-score {
+        display: flex;
+        .month-sell {
+          margin-left: 0.08rem; /* 3/37.5 */
+        }
+      }
+    }
+    .brand {
+      position: absolute;
+      top: 0.4rem /* 15/37.5 */;
+      left: 0;
+      width: 0.746667rem /* 28/37.5 */;
+      height: 0.426667rem /* 16/37.5 */;
+      color: #fff;
+    }
+    .brand-in {
+      background-color: #ffa627;
+    }
+    .brand-new {
+      background-color: #21c56c;
+    }
   }
 }

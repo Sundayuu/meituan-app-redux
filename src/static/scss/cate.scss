@@ -1,0 +1,84 @@
+.cate-filter {
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 1.36rem; /* 51/37.5 */
+  height: 1.066667rem; /* 40/37.5 */
+  border-bottom: 0.026667rem /* 1/37.5 */ solid #e4e4e4;
+  position: fixed;
+  background-color: #fff;
+  .filter-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0.373333rem /* 14/37.5 */;
+    font-size: 0.266667rem /* 10/37.5 */;
+    border-right: 0.026667rem /* 1/37.5 */ solid #ccc;
+    box-sizing: border-box;
+    position: relative;
+    &:last-child {
+      border: none;
+    }
+    &.cate:after,
+    &.type:after {
+      margin-left: 0.133333rem /* 5/37.5 */;
+      content: '';
+      display: inline;
+      border: 0.026667rem /* 1/37.5 */ solid #000;
+      width: 0.133333rem /* 5/37.5 */;
+      height: 0.133333rem; /* 5/37.5 */
+      border-width: 0 1px 1px 0;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+    }
+    &.filter:after {
+      margin-left: 0.133333rem /* 5/37.5 */;
+      content: '';
+      width: 0.266667rem /* 10/37.5 */;
+      height: 0.266667rem /* 10/37.5 */;
+      background-image: url('~@static/img/filter.png');
+      background-size: cover;
+    }
+    &.active:not(.filter)::after {
+      transform: rotate(225deg);
+    }
+    &.active:before {
+      content: '';
+      position: absolute;
+      top: 0.64rem /* 24/37.5 */;
+      left: 49%;
+      border: 1px solid #e4e4e4;
+      background-color: #fff;
+      border-width: 0 1px 1px 0;
+      width: 0.186667rem /* 7/37.5 */;
+      height: 0.186667rem; /* 7/37.5 */
+      transform: rotate(225deg);
+    }
+  }
+}
+.cate-list {
+  width: 100%;
+  padding: 0.266667rem /* 10/37.5 */;
+  padding-top: 2.48rem /* 93/37.5 */;
+  box-sizing: border-box;
+  margin-bottom: 1.333333rem /* 50/37.5 */;
+  .store-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .store-name {
+      font-size: 0.426667rem; /* 16/37.5 */
+      padding: 0 0.133333rem; /* 5/37.5 */
+    }
+    .store-line {
+      display: block;
+      width: 0.533333rem /* 20/37.5 */;
+      height: 0;
+      border: 0.013333rem /* 0.5/37.5 */ solid #000;
+    }
+  }
+}

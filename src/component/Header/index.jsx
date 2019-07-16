@@ -10,7 +10,7 @@ export default class Head extends Component {
           className="head-left"
           onClick={this.props.renderLeft}
         />
-        <div className="head-name">分类</div>
+        <div className="head-name">{this.props.text}</div>
         <div className="head-home" />
       </div>
     )

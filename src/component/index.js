@@ -1,3 +1,4 @@
 import ScoreStart from './ScoreStar'
 import Head from './Header'
-export { ScoreStart, Head }
+import StoreItem from './StoreItem'
+export { ScoreStart, Head, StoreItem }
