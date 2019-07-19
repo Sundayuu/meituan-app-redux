@@ -1,9 +1,9 @@
 .cate-filter {
-  z-index: 2;
+  z-index: 999;
   width: 100%;
   display: flex;
   align-items: center;
-  padding-top: 1.36rem; /* 51/37.5 */
+  margin-top: 1.36rem; /* 51/37.5 */
   height: 1.066667rem; /* 40/37.5 */
   border-bottom: 0.026667rem /* 1/37.5 */ solid #e4e4e4;
   position: fixed;
@@ -57,13 +57,14 @@
       width: 0.186667rem /* 7/37.5 */;
       height: 0.186667rem; /* 7/37.5 */
       transform: rotate(225deg);
+      background-color: #efefef;
     }
   }
 }
 .cate-list {
   width: 100%;
   padding: 0.266667rem /* 10/37.5 */;
-  padding-top: 2.48rem /* 93/37.5 */;
+  padding-top: 2.4rem /* 90/37.5 */;
   box-sizing: border-box;
   margin-bottom: 1.333333rem /* 50/37.5 */;
   .store-head {
@@ -81,4 +82,57 @@
       border: 0.013333rem /* 0.5/37.5 */ solid #000;
     }
   }
+}
+.panel {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  top: 1.066667rem /* 40/37.5 */;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  margin-top: 50px;
+  &.show {
+    display: block;
+  }
+  .panel-inner {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 8rem /* 300/37.5 */;
+    background-color: #fff;
+    & > .item-panel {
+      display: none;
+      &.current {
+        display: block;
+      }
+    }
+    .sort-type-content {
+      display: flex;
+      align-items: stretch;
+      .type-item {
+        padding-left: 0.133333rem /* 5/37.5 */;
+        margin-bottom: 0.133333rem /* 5/37.5 */;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 1.173333rem /* 44/37.5 */;
+        background-color: #efefef;
+        border-bottom: 0.026667rem /* 1/37.5 */ solid #fff;
+        img {
+          height: 0.48rem /* 18/37.5 */;
+          width: 0.48rem /* 18/37.5 */;
+          display: block;
+          margin-right: 0.133333rem; /* 5/37.5 */
+        }
+        .activeSort {
+          color: #ffb000;
+        }
+      }
+    }
+  }
+}
+.banScroll {
+  overflow: hidden;
+  height: 100%;
 }
