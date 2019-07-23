@@ -5,7 +5,7 @@ const initialState = {
 const getOrderData = (state, action) => {
   return {
     ...state,
-    orderItems: action.data
+    orderItems: state.orderItems.concat(action.data)
   }
 }
 

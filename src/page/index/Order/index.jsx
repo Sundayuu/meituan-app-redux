@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Head } from 'component'
+import { Head, ScrollView } from 'component'
 import OrderItem from './OrderItem'
 import { getOrderList } from '@actions/orderAction'
 class Order extends Component {
   componentDidMount() {
-    console.log(this.props.getOrderData())
+    this.props.getOrderData()
   }
   render() {
     return (
@@ -16,11 +16,13 @@ class Order extends Component {
           }}
           text="订单"
         />
-        <div className="content-wrap">
-          {this.props.orderItems.map(item => {
-            return <OrderItem item={item} key={item.hash_id} />
-          })}
-        </div>
+        <ScrollView loadCallBack={this.props.getOrderData}>
+          <div className="content-wrap">
+            {this.props.orderItems.map(item => {
+              return <OrderItem item={item} key={item.hash_id} />
+            })}
+          </div>
+        </ScrollView>
       </div>
     )
   }
