@@ -1,0 +1,75 @@
+.content-wrap {
+  padding-top: 1.36rem /* 51/37.5 */;
+  background-color: #efefef;
+  margin-bottom: 1.333333rem /* 50/37.5 */;
+}
+.order {
+  .order-item {
+    border-radius: 0.266667rem /* 10/37.5 */;
+    background-color: #fff;
+    margin-top: 0.266667rem /* 10/37.5 */;
+    .order-item-title {
+      display: flex;
+      border-bottom: 0.026667rem /* 1/37.5 */ solid #ccc;
+      padding: 0 0.266667rem /* 10/37.5 */;
+      .order-item-name {
+        width: 80%;
+        height: 1.066667rem /* 40/37.5 */;
+        text-align: left;
+        line-height: 1.066667rem; /* 40/37.5 */
+        font-weight: 600;
+        font-size: 0.426667rem; /* 16/37.5 */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .order-status {
+        flex: 1;
+        font-size: 0.373333rem /* 14/37.5 */;
+        color: #666;
+        align-self: center;
+        text-align: right;
+      }
+    }
+
+    .order-content {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 0.266667rem /* 10/37.5 */;
+      img {
+        height: 1.066667rem /* 40/37.5 */;
+        width: 1.066667rem; /* 40/37.5 */
+        border-radius: 50%;
+        background-size: center;
+      }
+      .order-content-detail {
+        margin-left: 0.266667rem /* 10/37.5 */;
+        flex: 1;
+        .pruduct-item {
+          color: #666;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+    .order-bottom {
+      border-top: 0.026667rem /* 1/37.5 */ solid #ccc;
+      height: 1.333333rem /* 50/37.5 */;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 0.266667rem /* 10/37.5 */;
+      .comment {
+        border: 1px solid #aaa;
+        width: 1.866667rem /* 70/37.5 */;
+        height: 0.8rem /* 30/37.5 */;
+        border-radius: 0.266667rem /* 10/37.5 */;
+        text-align: center;
+        line-height: 0.8rem /* 30/37.5 */;
+        box-sizing: border-box;
+        margin-left: 0.266667rem; /* 10/37.5 */
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@ import {
   changeSortIcon
 } from '@actions/cateAction'
 import { FilterItem } from 'component'
-
+let ele = document.getElementsByTagName('body')
 class FilterHeader extends Component {
   componentDidMount() {
     this.props.getFilterData()
@@ -23,7 +23,6 @@ class FilterHeader extends Component {
           className={cls}
           key={item.key}
           onClick={() => {
-            let ele = document.getElementsByTagName('body')
             let closePanel = false
             // 如果点击的是同一个tab
             if (this.props.activeKey === item.key && !this.props.closePanel) {
@@ -55,11 +54,13 @@ class FilterHeader extends Component {
 
       return (
         <div className={cls} key={item.key}>
-          {this.props.activeKey === 'cate'
-            ? this.renderCateList()
-            : this.props.activeKey === 'type'
-            ? this.renderSortTypeList()
-            : null}
+          {this.props.activeKey === 'cate' ? (
+            this.renderCateList()
+          ) : this.props.activeKey === 'type' ? (
+            this.renderSortTypeList()
+          ) : this.props.activeKey === 'filter' ? (
+            <ActivityFilter filterData={this.props.filterData} />
+          ) : null}
         </div>
       )
     })
@@ -72,12 +73,13 @@ class FilterHeader extends Component {
         <div className="sort-type-content" key={item.code}>
           <div
             className="type-item"
-            onClick={() =>
+            onClick={() => {
               this.props.changeSortIcon({
                 activeType: 'activeSortCode',
                 activeCode: item.code
               })
-            }
+              ele[0].className = ''
+            }}
           >
             <img
               src={
@@ -117,6 +119,19 @@ class FilterHeader extends Component {
       )
     })
   }
+  // renderFilterList = () => {
+  //   let data = this.props.filterData.activity_filter_list
+  //   if (!data) return null
+  //   return data.map(item => {
+  //     return (
+  //       <FilterItem
+  //         cateData={item}
+  //         key={item.code}
+  //         filterType={'activeActivityCode'}
+  //       />
+  //     )
+  //   })
+  // }
   render() {
     let cls = 'panel'
     if (!this.props.closePanel) {
@@ -133,6 +148,19 @@ class FilterHeader extends Component {
       </div>
     )
   }
+}
+const ActivityFilter = ({ filterData }) => {
+  let data = filterData.activity_filter_list
+  if (!data) return null
+  return data.map(item => {
+    return (
+      <FilterItem
+        cateData={item}
+        key={item.code}
+        filterType={'activeActivityCode'}
+      />
+    )
+  })
 }
 const mapStateToProps = state => ({
   tabs: state.cateReducer.tabs,

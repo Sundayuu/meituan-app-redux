@@ -26,7 +26,7 @@ const initState = {
   filterData: [],
   activeSortCode: '',
   activeCateCode: '',
-  activeFilterCode: ''
+  activeActivityCode: ''
 }
 const changeTab = (state, action) => {
   return {
